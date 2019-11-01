@@ -69,7 +69,7 @@ p {
 }
 
 .title{
-  margin-top: 90px;
+  margin-top: 120px;
 }
 
 .title img{
@@ -138,4 +138,12 @@ p {
   margin-top: -25px;
   font-size: 1.5rem;
   margin-bottom: 30px;
+}
+
+.gif{
+  display: flex;
+}
+
+.gif img {
+  margin-left: -35px;
 }
