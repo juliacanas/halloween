@@ -1,2 +1,27 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<main>
+
+    <section class="container">
+        <div class="title"><img src="/images/halloween-title.svg" alt="title"></div>
+        <div class="content">
+            <h2>Resuelve el Misterio. <br> Música en directo, Espelusnantes espectaculos<br> y más sorpresas...
+            </h2>
+            <p> </p>
+        </div>
+
+        <form action="/signup" method="POST">
+            <div class="inp-lab">
+                <label for="email"><p>Email</p></label>
+                <input type="text" name="email" placeholder="aaa@aaa.com">
+                <button class="btn" type="submit">register! </button>
+            </div>
+            {{#if errorMessage}}
+            <div class="error-message">{{ errorMessage }}</div>
+            {{/if}}
+        </form>
+
+        <div>
+            <p></p>
+        </div>
+
+    </section>
+</main>

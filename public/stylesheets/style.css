@@ -1,8 +1,82 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+  background-color: black;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 10px;
+
+}
+
+main {
+  background-image: url("/images/hallowen-backgroun1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* h1 {
+  color: #bf0811;
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 5.5rem;
+} */
+
+h2 {
+  color: #db9600;
+  font-size: 1.8rem;
+  margin-top: 50px;
+}
+
+p {
+  color: white;
+  font-size: 1.05rem;
+}
+
+.btn {
+  border: none;
+  margin-top: 15px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #bf0811;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin-left: 45%;
+}
+
+.content {
+  text-align: center;
+}
+
+.title{
+  margin-top: 80px;
+}
+
+.title img{
+  height: 180px;
+}
+
+.inp-lab{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inp-lab>label{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.inp-lab>input{
+  border: none;
+  padding: 5px 10px;
 }
