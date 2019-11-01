@@ -16,19 +16,29 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-mongoose
-  .connect("mongodb://localhost/halloween", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect(process.env.MONGODB_URI, {
+  keepAlive: true,
+  useNewUrlParser: true,
+  reconnectTries: Number.MAX_VALUE,
+  useUnifiedTopology: true
+});
+
+app.use(
+  session({
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60
+    }),
+    secret: process.env.API_SECRET,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000
+    }
   })
-  .then(x => {
-    console.log(
-      `Connected to Mongo! Database name: "${x.connections[0].name}"`
-    );
-  })
-  .catch(err => {
-    console.error("Error connecting to mongo", err);
-  });
+);
+
 
 
 // view engine setup
