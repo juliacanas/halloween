@@ -13,8 +13,15 @@ body {
 
 }
 
-main {
+.main1 {
   background-image: url("/images/hallowen-backgroun1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.main2 {
+  background-image: url("/images/hallowen-backgroun2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -23,7 +30,7 @@ main {
  h1 {
   color: #bf0811;
   font-family: 'Lakki Reddy', cursive;
-  font-size: 5.5rem;
+  font-size: 3rem;
 } 
 
 h2 {
@@ -53,6 +60,7 @@ p {
   align-items: center;
   max-width: 400px;
   margin-left: 45%;
+  margin-top: -175px;
 }
 
 .content {
@@ -79,4 +87,37 @@ p {
 .inp-lab>input{
   border: none;
   padding: 5px 10px;
+}
+
+.container-logo{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.container-logo img {
+  width: 120px;
+}
+
+/*INFO PAGE*/
+.container-info {
+  margin-left: 40%;
+   max-width: 400px;
+  
+}
+
+.container-info div h2{
+  font-size: 20px;
+  color: #FBB03B;
+ 
+}
+
+
+.ghost {
+  width: 45%;
+}
+.info-h2{
+  color: #fff;
+  margin-top: -25px;
+  font-size: 1.5rem;
 }
